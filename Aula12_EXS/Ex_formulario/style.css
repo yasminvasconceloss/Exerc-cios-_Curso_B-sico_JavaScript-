@@ -1,6 +1,6 @@
 body {
-    background: rgb(22, 233, 248);
-    font: normal 15pt calibri;
+    background: rgb(19, 146, 146);
+    font: normal 16pt Arial;
 
 }
 
@@ -10,7 +10,7 @@ header {
 }
 
 section {
-    background: white;
+    background: rgb(27, 196, 202);
     border-radius: 10px;
     padding: 15;
     width: 500px; 
