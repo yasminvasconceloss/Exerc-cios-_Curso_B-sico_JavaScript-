@@ -1,29 +1,22 @@
-function carregar() {      //carregar a página
-    var mensagem = document.getElementById("mensagem")
-    var img = document.getElementById("imagem")
-    var data = new Date()
-    var hora = data.getHours()
+function tabuada() {
+    let num = document.getElementById('txtn')
+    let tab = document.getElementById('seltab')
 
-    mensagem.innerHTML = `Agora são ${hora} horas do dia ${data} `
-
-    if (hora >= 0 && hora < 12){
-        // BOM DIA!
-        img.src = "manha.jpg"
-        document.body.style.background = "#F8F29F"
-
-    } else if (hora >= 12 && hora < 18) {
-        // BOA TARDE!
-        img.src = "tarde.jpg"
-        document.body.style.background = "#F48333"
-
+    if(num.value.length == 0){
+        alert('Por favor, digite um número')     
     } else {
-        // BOA NOITE!
-        img.src = "noite.jpg"
-        document.body.style.background = "#080A8B"
+        let n = Number(num.value)
+        let c = 1
+        
+        tab.innerHTML = ''     //limpa a área para receber a próxima tabuada 
 
+        while (c <= 10){
+            let item = document.createElement("option")   // colocar opções
+            item.text = `${n} X ${c} = ${n*c}`
+            item.value = `tab${c}`   // saber o item que foi selecionado
+            tab.appendChild(item)
+            c++     //incrementa valor de c 
+        }
     }
-
+    
 }
-
-
-
